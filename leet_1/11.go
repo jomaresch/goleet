@@ -1,6 +1,6 @@
 package leet_1
 
-var mapping = []struct {
+var romanMapping = []struct {
 	num int
 	val string
 }{
@@ -20,12 +20,12 @@ var mapping = []struct {
 }
 
 func intToRoman(num int) string {
-	mappingIndex := len(mapping) - 1
+	mappingIndex := len(romanMapping) - 1
 	result := ""
 	for num > 0 {
-		if num/mapping[mappingIndex].num > 0 {
-			result += mapping[mappingIndex].val
-			num -= mapping[mappingIndex].num
+		if num/romanMapping[mappingIndex].num > 0 {
+			result += romanMapping[mappingIndex].val
+			num -= romanMapping[mappingIndex].num
 		} else {
 			mappingIndex--
 		}
